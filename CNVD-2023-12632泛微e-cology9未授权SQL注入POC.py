@@ -20,7 +20,7 @@ def ask(url):
     }
     # 发送 POST 请求
     try:
-        response = requests.post(url=url, headers=headers, data=data, timeout=5, verify=False)  # 忽略证书
+        response = requests.post(url=url, headers=headers, data=data, timeout=2, verify=False)  # 忽略证书
         # 判断返回结果中是否包含字符串 result
         if 'baseSql' in response.text and "baseSql" in response.text:
             print('[+] 存在漏洞：', url)
